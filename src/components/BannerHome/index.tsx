@@ -27,7 +27,7 @@ export function BannerHome() {
       <Flex direction="column">
         <Heading
           size="xl"
-          color="var(--chakra-colors-white)"
+          color="var(--chakra-colors-light-white)"
           mt="80px"
           fontWeight="medium"
           lineHeight="54px"
@@ -38,7 +38,7 @@ export function BannerHome() {
           <br /> infinitas possibilidades.
         </Heading>
         <Text
-          color="var(--chakra-colors-white)"
+          color="var(--chakra-colors-light-info)"
           mt="20px"
           fontSize="xl"
           maxW="524px"
