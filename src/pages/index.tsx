@@ -1,6 +1,7 @@
 import { Box, Center, Divider, Heading } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { BannerHome } from "../components/BannerHome";
+import { ContinentsSlides } from "../components/ContinentsSlides";
 import Header from "../components/Header";
 import { TravelsType } from "../components/TravelsType";
 
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       >
         Vamos nessa? Então escolha seu continente
       </Heading>
+      <ContinentsSlides />
     </Box>
   );
 };

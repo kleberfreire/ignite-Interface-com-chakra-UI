@@ -1,4 +1,4 @@
-import { Box, Flex, HStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, UnorderedList } from "@chakra-ui/react";
 import { TravelsItens } from "./TravelsItens";
 
 const travelsTypeData = [
@@ -41,8 +41,13 @@ const travelsTypeData = [
 
 export function TravelsType() {
   return (
-    <Box maxW="1160px" mx="auto" mt="85px">
-      <Flex as="ul" justify="space-between" flexWrap="wrap">
+    <UnorderedList maxW="1160px" mx="auto" mt="85px" px="20px">
+      <Flex
+        direction="row"
+        flexWrap="wrap"
+        justify="space-around"
+        align="center"
+      >
         {travelsTypeData.map((item, index) => (
           <TravelsItens
             key={item.title + index}
@@ -54,6 +59,6 @@ export function TravelsType() {
           />
         ))}
       </Flex>
-    </Box>
+    </UnorderedList>
   );
 }
