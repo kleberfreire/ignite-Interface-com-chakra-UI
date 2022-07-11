@@ -20,22 +20,22 @@ interface IContinentsData {
 
 const continentsData: IContinentsData[] = [
   {
-    title: "China",
+    title: "Europa",
     subtitle: "O continente mais antigo.",
-    img: "https://images.unsplash.com/photo-1595445428220-95c9429c6005?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzMwMzQ4NA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1240",
-    link: "/",
+    img: "https://images.unsplash.com/photo-1599171571332-b31a23c3fd33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzU0NTg5OQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+    link: "/continents/europe",
   },
   {
     title: "Itália",
     subtitle: "Deixou uma marca poderosa na culinária e na cultura ocidentais.",
-    img: "https://images.unsplash.com/photo-1645211710746-9629755e6814?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzMwMzMzNw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1240",
-    link: "/",
+    img: "https://images.unsplash.com/photo-1571729391507-07fe2ff051dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzU0NDQzMQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
+    link: "/europa",
   },
   {
     title: "Canadá",
     subtitle:
       "As vastas regiões de natureza selvagem do Canadá compreendem o Parque Nacional de Banff.",
-    img: "https://images.unsplash.com/photo-1544161519-0690a8886606?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzMwMzY0Ng&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1240",
+    img: "https://images.unsplash.com/photo-1544161497-6095fb868d58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzU0Mzg3Nw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080",
     link: "/",
   },
 ];
@@ -44,11 +44,10 @@ export function ContinentsSlides() {
   return (
     <Box
       maxWidth="1240px"
-      height="450px"
+      height={["320px", "320px", "450px"]}
       mx="auto"
       position="relative"
-      pt="54px"
-      pb="40px"
+      my="54px"
     >
       <Swiper
         spaceBetween={30}
@@ -65,6 +64,7 @@ export function ContinentsSlides() {
         style={{
           width: "100%",
           height: "100%",
+          //@ts-ignore
           "--swiper-navigation-color": "#FFBA08",
           "--swiper-pagination-color": "#FFBA08",
         }}
@@ -87,20 +87,30 @@ export function ContinentsSlides() {
                 alignItems="center"
                 justifyContent="center"
                 flexDirection="column"
+                width="100%"
+                height="100%"
+                bg="rgba(0,0,0, 0.5)"
               >
                 <Link href={item.link}>
                   <a>
                     <Heading
                       as="h2"
-                      fontSize="3rem"
+                      fontSize={["1.5rem", "1.5rem", "3rem"]}
                       color="var(--chakra-colors-light-text)"
                       fontWeight="bold"
                       textAlign="center"
+                      maxWidth={["200px", "300px", "700px"]}
                     >
                       {item.title}
                     </Heading>
 
-                    <Text fontSize="1.5rem" color="#DADADA" fontWeight="bold">
+                    <Text
+                      fontSize={["0.875rem", "0.875rem", "1.5rem"]}
+                      color="#DADADA"
+                      fontWeight="bold"
+                      maxWidth={["200px", "300px", "700px"]}
+                      textAlign="center"
+                    >
                       {item.subtitle}
                     </Text>
                   </a>
@@ -116,35 +126,6 @@ export function ContinentsSlides() {
             </SwiperSlide>
           );
         })}
-
-        {/* <SwiperSlide
-          style={{
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1645211710746-9629755e6814?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzMwMzMzNw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1240"
-            style={{
-              display: "block",
-              width: "100%",
-            }}
-          />
-        </SwiperSlide> */}
-        {/* <SwiperSlide
-          style={{
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <img
-            src="https://images.unsplash.com/photo-1544161519-0690a8886606?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=450&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1NzMwMzY0Ng&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1240"
-            style={{
-              display: "block",
-              width: "100%",
-            }}
-          />
-        </SwiperSlide> */}
       </Swiper>
     </Box>
   );

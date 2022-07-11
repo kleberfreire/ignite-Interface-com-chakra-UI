@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Header />
       <BannerHome />
       <TravelsType />
-      <Center my="10" maxWidth="1160px" mx="auto">
+      <Center mt="80px" maxWidth="1160px" mx="auto">
         <Divider
           w="90px"
           borderColor="#000000"
@@ -23,9 +23,10 @@ const Home: NextPage = () => {
       <Heading
         textAlign="center"
         fontWeight="medium"
+        mt="52px"
         color="var(--chakra-colors-dark-text)"
       >
-        Vamos nessa? Então escolha seu continente
+        Vamos nessa? <br /> Então escolha seu continente
       </Heading>
       <ContinentsSlides />
     </Box>

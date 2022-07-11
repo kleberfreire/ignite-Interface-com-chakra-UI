@@ -15,7 +15,6 @@ export function BannerHome() {
 
   return (
     <Flex
-      // bg="red"
       bgImage="url('/images/banner/Background.svg')"
       bgPosition="top"
       bgRepeat="no-repeat"
