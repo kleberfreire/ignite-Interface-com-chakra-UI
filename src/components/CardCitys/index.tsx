@@ -15,7 +15,9 @@ export function CardCitys() {
           <Heading fontSize="1.25rem" fontWeight="semibold">
             Londres
           </Heading>
-          <Heading fontSize="1rem">Reino Unido</Heading>
+          <Heading fontSize="1rem" fontWeight="medium">
+            Reino Unido
+          </Heading>
         </Flex>
         <Box></Box>
       </Flex>
